@@ -1,0 +1,50 @@
+.container {
+  align-items: stretch;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.container a {
+  color: inherit;
+}
+
+.header,
+.footer {
+  background: var(--background);
+  color: var(--foreground);
+  display: flex;
+  padding: 0.875rem;
+}
+
+.header {
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.footer {
+  font-size: 0.875rem;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.header > *,
+.footer > * {
+  margin: 0;
+  padding: 0;
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.header p {
+  max-width: 54ch;
+}
+
+.footer nav {
+  display: flex;
+  gap: 1rem;
+}

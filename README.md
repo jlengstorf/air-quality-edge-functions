@@ -8,13 +8,15 @@ See the demo: https://air-quality-edge-functions.netlify.app
 
 To run this yourself, you need two sets of credentials:
 
-1.  `AQICN_API_KEY` — this is free and can be requested from the [Air Quality Open Data Platform](https://aqicn.org/data-platform/token/).
+1.  `NEXT_PUBLIC_AQICN_API_KEY` — this is free and can be requested from the [Air Quality Open Data Platform](https://aqicn.org/data-platform/token/).
     
     This is used to create a map overlay showing the air quality on a map. ([More info in the AQI docs.](https://aqicn.org/faq/2015-09-18/map-web-service-real-time-air-quality-tile-api/))
 
-2.  `GOOGLE_API_KEY` — this has a free tier and is created on the [Google Maps Platform credentials page](https://console.cloud.google.com/project/_/google/maps-apis/credentials).
+2.  `NEXT_PUBLIC_GOOGLE_API_KEY` — this has a free tier and is created on the [Google Maps Platform credentials page](https://console.cloud.google.com/project/_/google/maps-apis/credentials).
 
     You need to create a project (the credentials page will guide you through this) and enable both the [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview) and the [Geocoding API](https://developers.google.com/maps/documentation/geocoding/start).
+
+    **Heads up!** Make sure to [restrict your API key](https://developers.google.com/maps/api-security-best-practices#application-restriction) to just the domain you intend to ship it on and to only have access to the APIs you need. Otherwise your key could be misused and you could end up with an unexpected bill!
 
 [Create a Netlify site](https://docs.netlify.com/welcome/add-new-site/), then [add the above credentials as env vars](https://docs.netlify.com/environment-variables/overview/#site-environment-variables).
 
@@ -40,8 +42,8 @@ npm i -g netlify-cli
 ntl init
 
 # add your env vars
-ntl env:set AQICN_API_KEY "<your_key_here>"
-ntl env:set GOOGLE_API_KEY "<your_key_here>"
+ntl env:set NEXT_PUBLIC_AQICN_API_KEY "<your_key_here>"
+ntl env:set NEXT_PUBLIC_GOOGLE_API_KEY "<your_key_here>"
 
 # start the dev server
 ntl dev
