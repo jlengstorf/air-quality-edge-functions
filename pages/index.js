@@ -72,8 +72,14 @@ export default function Home({ address, center }) {
           <p>
             This is a demo of updating a map to show air quality data for the
             user’s current location using{' '}
-            <a href="">Next.js Advanced Middleware</a>, powered by{' '}
-            <a href="">Netlify Edge Functions</a>.
+            <a href="https://docs.netlify.com/integrations/frameworks/next-js/middleware/">
+              Next.js Advanced Middleware
+            </a>
+            , powered by{' '}
+            <a href="https://docs.netlify.com/edge-functions/overview/">
+              Netlify Edge Functions
+            </a>
+            .
           </p>
         </header>
         <Map center={center} />
